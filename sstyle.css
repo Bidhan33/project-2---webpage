@@ -1,0 +1,474 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(106, 103, 103, 0.88) 0%, rgba(44, 56, 94, 1) 100%) no-repeat;
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+
+}
+
+/* home page css */
+
+
+/* css for header */
+a {
+    text-decoration: none;
+}
+
+a img {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.cart-sec {
+    position: relative;
+}
+
+.cart-img {
+    border: 1px soliid rgb(224, 51, 51);
+    outline: none;
+}
+
+.cart-text {
+    border: 2px solid rgb(245, 233, 234);
+    position: absolute;
+    top: -5px;
+    right: 0;
+    color: rgb(211, 223, 222);
+    font-size: 12px;
+    border-radius: 50%;
+}
+
+.nav {
+    background-color: rgb(9, 9, 10);
+    color: white;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    color: rgb(239, 226, 226);
+    align-items: center;
+}
+
+.con-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.con-details a{
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+    transition: all 0.3s ease-in;
+}
+
+a:hover{
+    color: blue;
+    scale: 1.1;
+}
+
+.con-details a:active {
+    color: rgb(4, 4, 49);
+}
+
+/* css for home page body */
+
+.m-container {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.text-overlay {
+    position: absolute;
+    top: 52%;
+    left: 2.3%;
+    color: rgb(236, 230, 230);
+    text-align: justify;
+
+    font-family: 'Verdana', sans-serif;
+    border: 2px solid #0b0b0b; 
+     padding: 10px; 
+      
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;;
+    position: fixed;
+    bottom: 0px;
+    background: grey; 
+    margin-top: 1rem;
+}
+
+.f-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-header-container h2 {
+    color: black;
+    font-weight: 600;
+}
+
+.f-header-container p {
+    color: rgb(30, 33, 33);
+    font-size: 14px;
+}
+
+.f-header-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.f-header-item a {
+    text-decoration: none;
+    color: white;
+    transition: all .3s ease-in;
+}
+
+a:hover{
+    color: blue;
+    scale: 1.1;
+}
+
+.copy {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.copy .title {
+    color: rgb(48, 48, 78);
+}
+
+.c-symbol {
+    font-size: 1.4rem;
+
+}
+
+/* product css */
+
+.p-container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mp-container {
+    display: grid;
+    margin: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 250px);
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+    .mp-container {
+        grid-template-columns: repeat(3, 250px);
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .mp-container {
+        grid-template-columns: repeat(2, 250px);
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .mp-container {
+        grid-template-columns: repeat(1, 250px);
+    }
+  }
+
+.product {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px rgb(36, 210, 48) solid;
+    border-radius: .8rem;
+    margin: 1rem;
+}
+
+.product img {
+    width: 94%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    margin: 0.4rem;
+    border-radius: .5rem;
+    transition: all .3s ease-in;
+}
+
+.product img:hover {
+    scale: 1.05;
+}
+
+.p-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    gap: 1.3rem;
+}
+
+.price {
+    color: rgb(27, 239, 155);
+}
+
+.p-details button {
+    padding: 2px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: all .2s ease-in;
+}
+
+.p-details button:hover {
+    scale: 1.5;
+    color: rgb(255, 255, 255);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    align-items: center;
+}
+
+.buttons span {
+    font-size: .9rem;
+}
+
+/* cart css */
+
+.m-c-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    height: auto;
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-box input {
+    padding: .4rem;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    background: rgb(10, 10, 36);
+    color: rgb(255, 255, 255);
+}
+
+.search-box button {
+    padding: .4rem;
+    color: rgb(255, 255, 255);
+    background: rgb(20, 20, 42);;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    transition: all .3s ease-in;
+}
+
+.search-box button:hover {
+    scale: 1.1;
+    background-color: rgb(72, 26, 39);
+}
+
+
+.c-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.text-info {
+    margin-top: 1rem;
+}
+
+.text-info span {
+    color: blue;
+}
+
+/* faq css */
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.f-header {
+    color: wheat;
+}
+
+.qn-container {
+    margin: 1rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.qn-container .qn {
+    font-size: 1.2rem;
+    color: rgb(32, 20, 20);
+    transition: all .3s ease-in;
+}
+
+.qn-container .answer{
+    display: none;
+    transform: all .3s ease-in;
+}
+
+.qn-container .qn:hover + .answer {
+    display: block;
+    color: rgb(250, 242, 242);
+}
+
+.inputqn {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* about css */
+
+.a-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.a-info h2 {
+    color: #e8d8f3; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: color 0.3s ease-in-out; }
+
+/* Add a hover effect for additional interactivity */
+.a-info h2:hover {
+    color: #8a2be2; /* Darker purple color on hover */
+}
+
+
+.a-details {
+    display: none;
+}
+
+.a-info h2:hover {
+    text-decoration: underline;
+    color: black;
+
+}
+
+.a-info h2:hover + .a-details {
+    display: block;
+    font-size: .9rem;
+    color: wheat;
+    padding: .5rem 0rem;
+}
+ .a-info p {
+    font-size: .9rem;
+    color: wheat;
+    padding: .5rem 0rem;
+} 
+
+
+
+body {
+    line-height: 1.6;
+    color: #fff; /* Default text color for the body */
+}
+
+.text-overlay {
+    /* Other styles */
+
+    /* Updated styles for better readability */
+    text-align: justify;
+    font-family: 'Verdana', sans-serif;
+    border: 2px solid #000;
+    padding: 10px;
+    color: #eee; /* Set the text color for better contrast */
+}
+
+.footer,
+.f-header p,
+.c-symbol,
+.copy {
+    color: #fff; /* Set the text color for better contrast */
+}
+
+.copy .title,
+.f-header-container h2,
+.qn-container .qn:hover + .answer,
+.a-info h2:hover,
+.a-info p {
+    color: #e6e6e6; 
+}
+
+/* Add these styles for better paragraph alignment and font styling */
+
+p {
+    text-align: justify;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; /* Adjust the font size as needed */
+    color: #ddd; /* Set the default text color for paragraphs */
+    margin-bottom: 1rem; /* Add some spacing between paragraphs */
+}
+
